@@ -18,8 +18,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/cliente',function(){
-    return view('cliente');
+Route::get('/cadastro',function(){
+    return view('cadastro');
 
 });
 Route::post('Inserir Cliente',[ClienteController::class,'store']);
@@ -27,11 +27,21 @@ Route::post('/cadastro-cliente',function(Request $request){
     print_r ($request->all ());
 
 });
+Route::get('/produto', function(){
+    return view('produto');
+});
+
+Route::post('/cadastro-produto', function(Request $request){
+    print_r ($request->all());
+});
+
 Route::get('/login',function(){
     return view ('auth.login');
-
-
 });
-Route::get('cliente',[ClienteController::class,'index']);
 
+Route::post('/login-efetuado', function(Request $request){
+    
+});
+
+Route::get('cliente',[ClienteController::class,'index']);
 
