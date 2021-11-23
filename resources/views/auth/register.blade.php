@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Registar Usuários</title>
 </head>
 <body>
-    <h1>Login</h1>
-    <form action="/login-efetuado" method="POST">
-        @csrf
-        
+    <form action="{{ url('/register') }}" method= "POST">
+    @csrf 
+
+    <label for="">Nome</label>
+    <br>
+    <input type="text" name= "name" required>
+    <br>
     <label for="">Email</label>
     <br>
     <input type="email" name= "email" required>
@@ -19,7 +22,12 @@
     <br>
     <input type="password" name= "password" required>
     <br>
-    <input type="submit" value ="Login">
+    <label for="">Confirmar Senha</label>
+    <br>
+    <input type="password" name= "password_confirmation" required>
+    <br>
+    <input type="submit" value ="Registar">
+
     </form>
 </body>
 </html>

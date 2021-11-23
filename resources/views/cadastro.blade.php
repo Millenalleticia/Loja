@@ -9,7 +9,7 @@
 <body>
 <h1> Cadastro de Clientes </h1> 
 
-    <form action="/cadastro-cliente" method= "Post"> 
+    <form action="/InsertUser" method= "POST"> 
         @csrf 
         <label for="">Nome</label>
         <input type="text"name="name">
